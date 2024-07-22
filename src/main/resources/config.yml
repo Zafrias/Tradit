@@ -1,0 +1,14 @@
+mongo-database:
+  database-name: "admin"
+  host: "localhost"
+  port: 27017
+  user: "root"
+  password: "hello_world123"
+
+permissions:
+  report-receive: "tradit.report.receive"
+  cannot-be-reported: "tradit.report.bypass"
+messages:
+  report-fail: "<red>You cannot report this person"
+  report-success: "<gray>You have reported '<gold><target></gold>' for <yellow><reason><yellow>"
+  report-broadcast: "<gray><green><reporter></green> has reported <yellow><target></yellow> for <gold><reason><gold>"

@@ -1,0 +1,5 @@
+name: Tradit
+version: 1.0
+author: Zafrias
+main: dev.zafrias.reports.Tradit
+description: "Powerful reports plugin"
