@@ -24,6 +24,7 @@ reloading the config only won't do anything !
 
 ### Permissions
 - `command.tradit.report` (allows the player to execute the command) **(CANNOT BE CUSTOMIZED)**
+- `command.tradit.reload` (allows the player to execute the reload config command) **(CANNOT BE CUSTOMIZED)**
 - `tradit.report.receive` (allows players/staff to receive the report sent) **(CUSTOMIZABLE)**
 - `tradit.report.bypass` (allows the player to become immune to getting reported) **(CUSTOMIZABLE)**
 
