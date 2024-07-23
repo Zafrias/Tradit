@@ -18,6 +18,10 @@ other players and to help staff ensure a great experience for all players in the
 `/report <player> <reason..>` is the main usage for Tradit's main command
 the purpose of this command is self explantory !
 
+`/tradit reload` reloads the config.yml of the plugin. <br>
+**NOTE:** if you change  something in the database section, you **MUST RESTART** the server, <br>
+reloading the config only won't do anything !
+
 ### Permissions
 - `command.tradit.report` (allows the player to execute the command) **(CANNOT BE CUSTOMIZED)**
 - `tradit.report.receive` (allows players/staff to receive the report sent) **(CUSTOMIZABLE)**
