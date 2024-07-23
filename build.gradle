@@ -27,9 +27,9 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.34'
     compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT' // The Spigot API with no shadowing. Requires the OSS repo.
 
-    implementation "net.kyori:adventure-api:4.17.0"
-    implementation "net.kyori:adventure-text-minimessage:4.17.0"
-    implementation "net.kyori:adventure-platform-bukkit:4.3.3"
+    compileOnly "net.kyori:adventure-api:4.17.0"
+    compileOnly "net.kyori:adventure-text-minimessage:4.17.0"
+    compileOnly "net.kyori:adventure-platform-bukkit:4.3.3"
 
     implementation 'org.mongodb:mongodb-driver-sync:5.1.2'
 
@@ -38,7 +38,6 @@ dependencies {
 
     // Add your specific platform module here
     implementation 'com.github.Revxrsal.Lamp:bukkit:3.2.1'
-
 }
 
 compileJava {// Preserve parameter names in the bytecode
