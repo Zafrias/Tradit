@@ -4,6 +4,7 @@ mongo-database:
   port: 27017
   user: "root"
   password: "hello_world123"
+  use-authentication: true
 
 permissions:
   report-receive: "tradit.report.receive"

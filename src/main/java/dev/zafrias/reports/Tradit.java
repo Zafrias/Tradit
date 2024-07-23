@@ -44,9 +44,22 @@ public final class Tradit extends JavaPlugin {
         getLogger().info("Loading commands !");
         //TODO load commands here
         BukkitCommandHandler handler = BukkitCommandHandler.create(this);
+        handler.enableAdventure(audiences);
+        if(handler.isBrigadierSupported()) {
+            handler.registerBrigadier();
+        }
+
         handler.register(new ReportCommand(this.getConfig()));
 
         getLogger().info("Tradit v" + this.getDescription().getVersion() + " has enabled successfully !");
+    }
+
+    @Override
+    public void reloadConfig() {
+        super.reloadConfig();
+        saveDefaultConfig();
+        getConfig().options().copyDefaults(true);
+        saveConfig();
     }
 
     public static void sendComponent(Player player, String msg, TextColor color) {

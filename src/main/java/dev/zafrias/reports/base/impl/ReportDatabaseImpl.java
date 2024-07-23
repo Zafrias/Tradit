@@ -10,7 +10,6 @@ import dev.zafrias.reports.base.ReportDatabase;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 import org.bukkit.configuration.file.FileConfiguration;
-
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -28,7 +27,7 @@ public final class ReportDatabaseImpl implements ReportDatabase {
     }
 
     private Object option(String name) {
-        return config.getString("mongo-database." + name);
+        return config.get("mongo-database." + name);
     }
 
     private boolean collectionExists() {
@@ -60,9 +59,12 @@ public final class ReportDatabaseImpl implements ReportDatabase {
 
     @Override
     public void connect() {
+        boolean useAuth = (boolean) option("use-authentication");
+
         ConnectionString connectionString = new
-                ConnectionString("mongodb://" + option("user") +
-                ":" + option("password") + "@" + option("host")
+                ConnectionString("mongodb://" + (useAuth ? option("user") +
+                ":" + option("password") + "@" : "")
+                + option("host")
                 + ":" + option("port") + "/?authSource=" + option("database-name"));
 
         client = MongoClients.create(MongoClientSettings.builder()

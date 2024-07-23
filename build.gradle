@@ -41,7 +41,8 @@ dependencies {
 
 }
 
-compileJava { // Preserve parameter names in the bytecode
+compileJava {// Preserve parameter names in the bytecode
+
     options.compilerArgs += ["-parameters"]
 }
 shadowJar {
